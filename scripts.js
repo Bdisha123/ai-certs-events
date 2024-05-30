@@ -77,7 +77,7 @@ window.addEventListener('scroll', function () {
 
 
 
-// -------------------------------------
+// -------------------------------------close hamburger menu after clicking links
 
 
 
@@ -119,20 +119,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active'); // Add active class to trigger animation
-                observer.unobserve(entry.target); // Stop observing once animation is triggered
+                entry.target.classList.add('active'); 
+                observer.unobserve(entry.target); 
             }
         });
     });
 
-    observer.observe(animatedHeading); // Start observing the element
+    observer.observe(animatedHeading); 
 });
 
 
 
 
-// -------------
-// script.js
+// -------------enroll
+
 let currentIndex = 0;
 
 const slides = document.querySelectorAll('.slide');
