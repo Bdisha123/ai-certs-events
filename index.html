@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Certs Event</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="landing-page">
+      <nav id="navbar">
+        <div class="logo">
+          <img
+            src="https://www.aicerts.io/wp-content/uploads/2024/03/logo-white.svg"
+            alt="AI Certs Logo">
+        </div>
+        <ul class="nav-links">
+          <li><a href="#events">Events</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#enroll">Enroll</a></li>
+        </ul>
+        <button class="hamburger" onclick="openMenu()">&#9776;</button>
+        <button class="cross" onclick="closeMenu()">&#735;</button>
+        <ul class="menu-list">
+          <li><a href="#events">Events</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#category">Category</a></li>
+        </ul>
+      </nav>
+
+      <header class="hero">
+        <div class="hero-content">
+          <h1>Upcoming Events</h1>
+          <p>Our nearest event starts within</p>
+          <div class="yellow-box">
+            <div id="countdown"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <section class="more-events" id="events">
+      <h2>More Upcoming Events</h2>
+      <div class="event-cards">
+        <!-- Repeat this block for each event -->
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-front">
+            <h3>Event Name</h3>
+          </div>
+          <div class="card-back">
+            <p>Schedule: Date & Time</p>
+            <p>Speaker: Speaker Name</p>
+          </div>
+        </div>
+        <!-- Add more cards here -->
+      </div>
+    </section>
+
+    <!-- ------------------------------------ -->
+
+    <h1 id="speaker-heading">Speakers</h1>
+    <section class="speaker" id="speakers">
+
+      <div class="slider-container">
+
+        <button class="nav-btn left-btn" id="prevBtn">&#10094;</button>
+        <div class="slider">
+          <div class="slide">
+            <div class="image-container">
+              <img src="./assets/a73.jpeg" alt="Speaker 1">
+            </div>
+            <div class="info-container">
+              <h2>Speaker 1</h2>
+              <p>Qualification 1</p>
+              <p>Qualification 2</p>
+              <p>Qualification 3</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="image-container">
+              <img src="./assets/a73.jpeg" alt="Speaker 2">
+            </div>
+            <div class="info-container">
+              <h2>Speaker 2</h2>
+              <p>Qualification 1</p>
+              <p>Qualification 2</p>
+              <p>Qualification 3</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="image-container">
+              <img src="./assets/a73.jpeg" alt="Speaker 3">
+            </div>
+            <div class="info-container">
+              <h2>Speaker 3</h2>
+              <p>Qualification 1</p>
+              <p>Qualification 2</p>
+              <p>Qualification 3</p>
+            </div>
+          </div>
+        </div>
+        <button class="nav-btn right-btn" id="nextBtn">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------- -->
+    <!-- ------------------------------------------- -->
+    <h1 id="speaker-heading">Enroll</h1>
+    <div class="form-container" id="enroll">
+
+      <form id="enrollment-form">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contact">Contact</label>
+        <input type="text" id="contact" name="contact" required>
+
+        <label for="eventname">Event Name</label>
+        <input type="text" id="eventname" name="eventname" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- -------------------------------------- -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo-newsletter">
+          <img
+            src="https://www.aicerts.io/wp-content/uploads/2024/03/logo-white.svg"
+            alt="AI Certs Logo">
+          <div class="newsletter-signup">
+            <h3>Newsletter Signup</h3>
+            <form>
+              <input type="email" placeholder="Enter your Email" required>
+              <button type="submit">➔</button>
+            </form>
+          </div>
+          <div class="social-media">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Why AI Certs™</a></li>
+              <li><a href="#">Accreditation</a></li>
+              <li><a href="#">Meet Our Team</a></li>
+              <li><a href="#">Trademarks</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Press Release</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Certifications</h4>
+            <ul>
+              <li><a href="#">AI+ Professional™</a></li>
+              <li><a href="#">AI+ Technical™</a></li>
+              <li><a href="#">Blockchain+ Technical™</a></li>
+              <li><a href="#">Blockchain+ Professional™</a></li>
+              <li><a href="#">View All</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Authorized</h4>
+            <ul>
+              <li><a href="#">Authorized Partners</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright © AI Certs™, Inc. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

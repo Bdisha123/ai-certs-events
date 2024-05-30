@@ -1,0 +1,726 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-page {
+    background-image: url('https://www.aicerts.io/wp-content/themes/aicerts/images/blogs-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    margin-left: 90px;
+    padding-top: 20px;
+}
+
+.nav-links {
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger,
+.cross {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    /* transition: opacity 0.3s ease; */
+}
+
+.menu-list.show {
+    display: flex;
+    opacity: 1;
+    animation: fadeIn 0.38s ease forwards;
+}
+
+.menu-list li {
+    font-family: "Merriweather", serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-list a {
+    font-family: "Merriweather", serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+
+
+.hero {
+    /* background-image: url('https://www.aicerts.io/wp-content/themes/aicerts/images/blogs-bg.jpg');
+    background-size: cover; */
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 120px;
+    margin-top: 2px;
+
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 2px;
+    padding-top: 2px;
+    animation: fadeIn 2.8s forwards;
+    /* margin-bottom: 20px; */
+}
+
+.hero p {
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.yellow-box {
+    background-color: #b1a325;
+    width: 205px;
+    border-radius: 40px;
+    padding: 20px;
+    display: inline-block;
+    /* Ensures the box only takes up the necessary width */
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    animation: fadeInOut 2s infinite;
+}
+
+.more-events,
+.speakers {
+    background-color: #000;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.more-events h2,
+.speakers h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 60px;
+    animation: fadeIn 2.8s forwards;
+    /* border-bottom: 2px solid #f0d907; */
+    opacity: 0;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+
+
+.event-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.card {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-front,
+.card-back p{
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.card-front {
+    /* background-color: #a62a2a; */
+    background: linear-gradient(135deg, rgb(21, 21, 21) 70%, rgb(227, 209, 67) 150%);
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(176,166,33,1) 49%); */
+}
+
+.card-back {
+    /* background-color: #f0d907; */
+    background: linear-gradient(90deg, rgba(233, 223, 148, 1) 0%, rgb(171, 168, 168) 100%);
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transition: all 1s ease;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transition: all 1s ease;
+    transform: rotateY(0deg);
+}
+
+/* -------------------- */
+
+/* style.css */
+#speaker-heading {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+
+#speakers {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 2px;
+    padding-top: 2px;
+    background-color: #030303;
+}
+
+.slider-container {
+    position: relative;
+    height: 500px;
+    /* Increased width for better proportion */
+    width: 650px;
+    overflow: hidden;
+    background-color: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 4px solid #f0d907;
+    border-radius: 2.5px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+    display: flex;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    /* border: 1px solid #a91717; Adding a border around each slide */
+    /* Rounded corners for the slides */
+    overflow: hidden;
+    /* Ensuring child elements don't overflow */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    /* Ensure the image takes up the full height */
+
+    object-fit: cover;
+    /* Cover the container without distortion */
+    /* Adding a border to separate image and text */
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #f4dd10;
+    background-color: #000000;
+    /* Background color for the text container */
+}
+.info-container p{
+    font-family: "Edu TAS Beginner", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.info-container h2 {
+    color: rgb(230, 132, 21);
+    margin: 0 0 10px;
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-size: 30px;
+  font-style: normal;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    /* Rounded navigation buttons */
+}
+
+.left-btn {
+    left: 10px;
+    z-index: 9999;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* -**********************------------------------- */
+
+
+.form-container {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    background-color: #222;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+button {
+    background-color: #b1a325;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d4bc2a;
+}
+
+/* ----------------------- */
+footer {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    padding: 2em 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-newsletter {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo-newsletter img {
+    max-width: 200px;
+}
+
+.newsletter-signup {
+    margin-top: 1em;
+}
+
+.newsletter-signup h3 {
+    margin-bottom: 0.5em;
+}
+
+.newsletter-signup form {
+    display: flex;
+}
+
+.newsletter-signup input {
+    /* padding: 0.5em;
+    flex: 1;
+    border: none; */
+
+    border: none;
+    background: none;
+    border-bottom: solid 1px #2a2e36;
+    width: 100%;
+    padding: 15px 30px;
+    color: var(--body-font-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.newsletter-signup button {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.social-media {
+    margin-top: 1em;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 0.5em;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    min-width: 500px;
+}
+
+.footer-column {
+    margin: 0 1em;
+}
+
+.footer-column h4 {
+    margin-bottom: 1em;
+    font-size: 28px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5em;
+}
+
+.footer-column ul li a {
+    color: #d0cece;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    border-top: 1px solid #454444;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 1px;
+    /* adjust the height to reduce the line thickness */
+    width: 80%;
+    /* adjust the width to reduce the line length */
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 0.9em;
+    padding-left: 150px;
+
+}
+
+footer::after {
+    content: "";
+    background-image: url('https://www.aicerts.io/wp-content/themes/aicerts/images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    /* Adjust as needed */
+    height: 200px;
+    /* Adjust as needed */
+    opacity: 1;
+    /* Adjust as needed for better visibility */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger,
+    .cross {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .yellow-box {
+        width: 180px;
+        padding: 15px;
+    }
+
+    .event-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    #speakers {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        width: 100%;
+    }
+
+    .form-container {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .hamburger {
+        display: none !important;
+    }
+
+    .cross {
+        display: none !important;
+    }
+
+    .menu-list.show {
+        display: none !important;
+    }
+}
+
+/* Further adjustments for screens smaller than 546px */
+@media (max-width: 546px) {
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .yellow-box {
+        width: 180px;
+        padding: 10px;
+    }
+
+    .event-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #speakers {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        margin-left: 12px;
+        border: none;
+        width: 100%;
+    }
+
+    .info-container {
+        padding: 10px;
+    }
+
+    .info-container h2 {
+        font-size: 18px;
+    }
+
+    .form-container {
+        max-width: 65%;
+        padding: 15px;
+    }
+
+    input {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo-newsletter,
+    .footer-links,
+    .footer-column {
+        min-width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
